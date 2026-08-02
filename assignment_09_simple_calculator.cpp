@@ -96,3 +96,16 @@ bool divide(double a, double b, double& result) {
     result = a / b;
     return true;
 }
+
+// Returns true if successful, false if modulus by zero was attempted
+bool modulus(double a, double b, double& result) {
+    if (b == 0) {
+        return false;
+    }
+    result = fmod(a, b); // fmod handles remainder for doubles (not just ints)
+    return true;
+}
+
+double power(double base, double exponent) {
+    return pow(base, exponent);
+}
