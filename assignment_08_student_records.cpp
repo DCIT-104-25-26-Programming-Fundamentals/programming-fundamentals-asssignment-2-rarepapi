@@ -142,3 +142,23 @@ void addStudent(vector<Student>& students) {
         cout << "Error: Number of scores must be positive. Student not added." << endl;
         return;
     }
+
+     for (int i = 0; i < numScores; i++) {
+        double score;
+        cout << "Enter score " << (i + 1) << ": ";
+        cin >> score;
+        s.scores.push_back(score);
+    }
+
+    students.push_back(s);
+    cout << "Student \"" << s.name << "\" added successfully." << endl;
+}
+
+// ---------------------------------------------------------------------------
+// Feature 2 — Display all students
+// ---------------------------------------------------------------------------
+void displayAllStudents(const vector<Student>& students) {
+    if (students.empty()) {
+        cout << "No students have been added yet." << endl;
+        return;
+    }
