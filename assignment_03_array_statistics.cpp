@@ -57,3 +57,25 @@ int getSum(int arr[], int n) {
 double getAverage(int arr[], int n) {
     return static_cast<double>(getSum(arr, n)) / n;
 }
+
+// Function to find the maximum value in the array
+int getMax(int arr[], int n) {
+    int maxVal = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > maxVal) {
+            maxVal = arr[i];
+        }
+    }
+    return maxVal;
+}
+
+// Function to find the minimum value in the array
+int getMin(int arr[], int n) {
+    int minVal = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] < minVal) {
+            minVal = arr[i];
+        }
+    }
+    return minVal;
+}
