@@ -174,4 +174,30 @@ int main() {
                     cout << "Error: Cannot divide by zero." << endl;
                 }
                 break;
-    
+             case 5:
+                getTwoNumbers(a, b);
+                if (modulus(a, b, result)) {
+                    cout << "Result: " << a << " % " << b << " = " << result << endl;
+                } else {
+                    cout << "Error: Cannot perform modulus by zero." << endl;
+                }
+                break;
+
+            case 6:
+                getTwoNumbers(a, b);
+                result = power(a, b);
+                cout << "Result: " << a << " ^ " << b << " = " << result << endl;
+                break;
+
+            case 7:
+                cout << "Goodbye!" << endl;
+                running = false;
+                break;
+
+            default:
+                cout << "Error: Please enter a number between 1 and 7." << endl;
+        }
+    }
+
+    return 0;
+}
