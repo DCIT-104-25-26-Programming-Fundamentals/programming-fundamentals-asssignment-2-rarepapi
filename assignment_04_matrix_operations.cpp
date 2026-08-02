@@ -140,3 +140,27 @@ int main() {
     int matA[MAX_SIZE][MAX_SIZE];
     int matB[MAX_SIZE][MAX_SIZE];
     int result[MAX_SIZE][MAX_SIZE];
+
+     // ---------------- PART A: Transpose ----------------
+    cout << "=== PART A: Transpose a Matrix ===" << endl;
+
+    int rows, cols;
+    cout << "Enter number of rows: ";
+    cin >> rows;
+    cout << "Enter number of columns: ";
+    cin >> cols;
+
+    if (rows <= 0 || cols <= 0 || rows > MAX_SIZE || cols > MAX_SIZE) {
+        cout << "Error: Dimensions must be between 1 and " << MAX_SIZE << "." << endl;
+        return 0;
+    }
+
+    readMatrix(matA, rows, cols, "matrix");
+
+    cout << "\nOriginal Matrix:" << endl;
+    printMatrix(matA, rows, cols);
+
+    transposeMatrix(matA, rows, cols, result);
+
+    cout << "\nTransposed Matrix:" << endl;
+    printMatrix(result, cols, rows); // note: dimensions swap
