@@ -91,3 +91,25 @@ bool isFibonacci(int num) {
 
     return a == num;
 }
+
+int main() {
+    // ---------------- PART A ----------------
+    int n;
+    cout << "How many terms? ";
+    cin >> n;
+
+    printFibonacci(n);
+
+    // ---------------- PART B ----------------
+    int num;
+    cout << "\nEnter a number to check: ";
+    cin >> num;
+
+    if (isFibonacci(num)) {
+        cout << num << " is a Fibonacci number." << endl;
+    } else {
+        cout << num << " is NOT a Fibonacci number." << endl;
+    }
+
+    return 0;
+}
