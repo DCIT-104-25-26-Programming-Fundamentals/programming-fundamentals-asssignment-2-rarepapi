@@ -90,3 +90,19 @@ int main() {
         cout << "Error: Number of values must be positive." << endl;
         return 0;
     }
+
+    int arr[MAX_SIZE];
+
+    for (int i = 0; i < n; i++) {
+        cout << "Enter number " << (i + 1) << ": ";
+        cin >> arr[i];
+    }
+
+    cout << "\nResults:" << endl;
+    cout << "Sum:     " << getSum(arr, n) << endl;
+    cout << "Average: " << fixed << setprecision(1) << getAverage(arr, n) << endl;
+    cout << "Maximum: " << getMax(arr, n) << endl;
+    cout << "Minimum: " << getMin(arr, n) << endl;
+
+    return 0;
+}
