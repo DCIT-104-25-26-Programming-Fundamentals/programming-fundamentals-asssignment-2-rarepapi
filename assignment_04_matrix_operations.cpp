@@ -213,3 +213,21 @@ int main() {
              << ") must equal number of rows in B (" << rowsB << ")." << endl;
         return 0;
     }
+
+    cout << "\nEnter values for Matrix A (" << rowsA << " x " << colsA << "):" << endl;
+    readMatrix(matA, rowsA, colsA, "A");
+
+    cout << "\nEnter values for Matrix B (" << rowsB << " x " << colsB << "):" << endl;
+    readMatrix(matB, rowsB, colsB, "B");
+
+    multiplyMatrices(matA, matB, rowsA, colsA, colsB, result);
+
+    cout << "\nMatrix A:" << endl;
+    printMatrix(matA, rowsA, colsA);
+    cout << "\nMatrix B:" << endl;
+    printMatrix(matB, rowsB, colsB);
+    cout << "\nProduct (A x B):" << endl;
+    printMatrix(result, rowsA, colsB);
+
+    return 0;
+}
