@@ -80,3 +80,16 @@
 #include <string>
 using namespace std;
 
+// ---------------------------------------------------------------------------
+// Display the menu
+// ---------------------------------------------------------------------------
+void showMenu() {
+    cout << "\n============================" << endl;
+    cout << "     TO-DO LIST MENU" << endl;
+    cout << "============================" << endl;
+    cout << "1. Add task" << endl;
+    cout << "2. View tasks" << endl;
+    cout << "3. Delete task" << endl;
+    cout << "4. Quit" << endl;
+    cout << "Enter your choice (1-4): ";
+}
