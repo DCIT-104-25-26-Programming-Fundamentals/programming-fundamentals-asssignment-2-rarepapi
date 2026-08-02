@@ -145,3 +145,36 @@ void deleteTask(vector<string>& tasks) {
     tasks.erase(tasks.begin() + (num - 1));
     cout << "Task \"" << removed << "\" has been removed." << endl;
 }
+// ---------------------------------------------------------------------------
+// main — runs the menu loop
+// ---------------------------------------------------------------------------
+int main() {
+    vector<string> tasks;
+    int choice;
+    bool running = true;
+
+    while (running) {
+        showMenu();
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                addTask(tasks);
+                break;
+            case 2:
+                viewTasks(tasks);
+                break;
+            case 3:
+                deleteTask(tasks);
+                break;
+            case 4:
+                cout << "Goodbye!" << endl;
+                running = false;
+                break;
+            default:
+                cout << "Error: Please enter a number between 1 and 4." << endl;
+        }
+    }
+
+    return 0;
+}
