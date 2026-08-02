@@ -106,3 +106,39 @@ double calculateAverage(const Student& s) {
     }
     return sum / s.scores.size();
 }
+
+// ---------------------------------------------------------------------------
+// Display the menu
+// ---------------------------------------------------------------------------
+void showMenu() {
+    cout << "\n================================" << endl;
+    cout << "   STUDENT RECORD SYSTEM MENU" << endl;
+    cout << "================================" << endl;
+    cout << "1. Add student" << endl;
+    cout << "2. Display all students" << endl;
+    cout << "3. Calculate average score" << endl;
+    cout << "4. Quit" << endl;
+    cout << "Enter your choice (1-4): ";
+}
+
+// ---------------------------------------------------------------------------
+// Feature 1 — Add a student
+// ---------------------------------------------------------------------------
+void addStudent(vector<Student>& students) {
+    Student s;
+
+    cin.ignore(); // clear leftover newline before getline
+    cout << "Student name: ";
+    getline(cin, s.name);
+
+    cout << "Student ID: ";
+    cin >> s.id;
+
+    int numScores;
+    cout << "How many scores? ";
+    cin >> numScores;
+
+    if (numScores <= 0) {
+        cout << "Error: Number of scores must be positive. Student not added." << endl;
+        return;
+    }
