@@ -162,3 +162,36 @@ void displayAllStudents(const vector<Student>& students) {
         cout << "No students have been added yet." << endl;
         return;
     }
+
+       cout << fixed << setprecision(2);
+
+    for (const Student& s : students) {
+        cout << "\nName:  " << s.name << endl;
+        cout << "ID:    " << s.id << endl;
+        cout << "Scores: ";
+        for (size_t i = 0; i < s.scores.size(); i++) {
+            cout << s.scores[i];
+            if (i != s.scores.size() - 1) {
+                cout << ", ";
+            }
+        }
+        cout << endl;
+        cout << "Average: " << calculateAverage(s) << endl;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Feature 3 — Calculate average score for a specific student ID
+// ---------------------------------------------------------------------------
+void findStudentAverage(const vector<Student>& students) {
+    int id;
+    cout << "Enter student ID: ";
+    cin >> id;
+
+    for (const Student& s : students) {
+        if (s.id == id) {
+            cout << fixed << setprecision(2);
+            cout << s.name << "'s average score: " << calculateAverage(s) << endl;
+            return;
+        }
+    }
