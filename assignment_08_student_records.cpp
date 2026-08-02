@@ -83,3 +83,26 @@
 #include <iomanip>
 using namespace std;
 
+// ---------------------------------------------------------------------------
+// Struct to represent a single student record
+// ---------------------------------------------------------------------------
+struct Student {
+    string name;
+    int id;
+    vector<double> scores;
+};
+
+// ---------------------------------------------------------------------------
+// Helper — calculate the average of a student's scores
+// ---------------------------------------------------------------------------
+double calculateAverage(const Student& s) {
+    if (s.scores.empty()) {
+        return 0.0;
+    }
+
+    double sum = 0.0;
+    for (double score : s.scores) {
+        sum += score;
+    }
+    return sum / s.scores.size();
+}
