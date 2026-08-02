@@ -109,3 +109,20 @@ bool modulus(double a, double b, double& result) {
 double power(double base, double exponent) {
     return pow(base, exponent);
 }
+
+// ---------------------------------------------------------------------------
+// Display the menu
+// ---------------------------------------------------------------------------
+void showMenu() {
+    cout << "\n============================" << endl;
+    cout << "     SIMPLE CALCULATOR" << endl;
+    cout << "============================" << endl;
+    cout << "1. Addition" << endl;
+    cout << "2. Subtraction" << endl;
+    cout << "3. Multiplication" << endl;
+    cout << "4. Division" << endl;
+    cout << "5. Modulus" << endl;
+    cout << "6. Exponentiation" << endl;
+    cout << "7. Quit" << endl;
+    cout << "Select an operation (1-7): ";
+}
