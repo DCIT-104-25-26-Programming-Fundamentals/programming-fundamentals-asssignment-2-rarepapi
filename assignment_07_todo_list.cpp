@@ -106,3 +106,18 @@ void addTask(vector<string>& tasks) {
     tasks.push_back(task);
     cout << "Task added: \"" << task << "\"" << endl;
 }
+
+// ---------------------------------------------------------------------------
+// Feature 2 — View all tasks
+// ---------------------------------------------------------------------------
+void viewTasks(const vector<string>& tasks) {
+    if (tasks.empty()) {
+        cout << "Your task list is empty." << endl;
+        return;
+    }
+
+    cout << "Your Tasks:" << endl;
+    for (size_t i = 0; i < tasks.size(); i++) {
+        cout << (i + 1) << ". " << tasks[i] << endl;
+    }
+}
