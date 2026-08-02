@@ -195,3 +195,40 @@ void findStudentAverage(const vector<Student>& students) {
             return;
         }
     }
+
+    cout << "Error: No student found with ID " << id << "." << endl;
+}
+
+// ---------------------------------------------------------------------------
+// main — runs the menu loop
+// ---------------------------------------------------------------------------
+int main() {
+    vector<Student> students;
+    int choice;
+    bool running = true;
+
+    while (running) {
+        showMenu();
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                addStudent(students);
+                break;
+            case 2:
+                displayAllStudents(students);
+                break;
+            case 3:
+                findStudentAverage(students);
+                break;
+            case 4:
+                cout << "Goodbye!" << endl;
+                running = false;
+                break;
+            default:
+                cout << "Error: Please enter a number between 1 and 4." << endl;
+        }
+    }
+
+    return 0;
+}
