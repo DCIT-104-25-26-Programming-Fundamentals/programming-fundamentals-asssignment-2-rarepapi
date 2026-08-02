@@ -66,3 +66,20 @@ void printTable(int num) {
         cout << num << "  x  " << setw(2) << i << "  =  " << (num * i) << endl;
     }
 }
+
+// ---------------------------------------------------------------------------
+// PART B — Print multiplication tables for every number from 1 to N
+// ---------------------------------------------------------------------------
+void printTablesUpToN(int n) {
+    if (n <= 0) {
+        cout << "Error: N must be a positive integer." << endl;
+        return;
+    }
+
+    for (int num = 1; num <= n; num++) {
+        printTable(num);
+        if (num != n) { // no separator after the very last table
+            cout << "---------------------------" << endl;
+        }
+    }
+}
