@@ -164,3 +164,22 @@ int main() {
 
     cout << "\nTransposed Matrix:" << endl;
     printMatrix(result, cols, rows); // note: dimensions swap
+
+    // ---------------- PART B: Addition ----------------
+    cout << "\n=== PART B: Add Two Matrices ===" << endl;
+    cout << "(Using the same dimensions as above: " << rows << " x " << cols << ")" << endl;
+
+    cout << "\nEnter values for Matrix A:" << endl;
+    readMatrix(matA, rows, cols, "A");
+
+    cout << "\nEnter values for Matrix B (same size as A):" << endl;
+    readMatrix(matB, rows, cols, "B");
+
+    addMatrices(matA, matB, rows, cols, result);
+
+    cout << "\nMatrix A:" << endl;
+    printMatrix(matA, rows, cols);
+    cout << "\nMatrix B:" << endl;
+    printMatrix(matB, rows, cols);
+    cout << "\nSum (A + B):" << endl;
+    printMatrix(result, rows, cols);
