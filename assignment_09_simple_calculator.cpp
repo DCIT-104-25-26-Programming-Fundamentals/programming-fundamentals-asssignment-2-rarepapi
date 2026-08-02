@@ -154,3 +154,24 @@ int main() {
                 result = add(a, b);
                 cout << "Result: " << a << " + " << b << " = " << result << endl;
                 break;
+              case 2:
+                getTwoNumbers(a, b);
+                result = subtract(a, b);
+                cout << "Result: " << a << " - " << b << " = " << result << endl;
+                break;
+
+            case 3:
+                getTwoNumbers(a, b);
+                result = multiply(a, b);
+                cout << "Result: " << a << " * " << b << " = " << result << endl;
+                break;
+
+            case 4:
+                getTwoNumbers(a, b);
+                if (divide(a, b, result)) {
+                    cout << "Result: " << a << " / " << b << " = " << result << endl;
+                } else {
+                    cout << "Error: Cannot divide by zero." << endl;
+                }
+                break;
+    
