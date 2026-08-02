@@ -88,3 +88,29 @@ void printMatrix(int mat[MAX_SIZE][MAX_SIZE], int rows, int cols) {
         cout << endl;
     }
 }
+
+// ---------------------------------------------------------------------------
+// PART A — Transpose
+// ---------------------------------------------------------------------------
+
+void transposeMatrix(int mat[MAX_SIZE][MAX_SIZE], int rows, int cols,
+                      int result[MAX_SIZE][MAX_SIZE]) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            result[j][i] = mat[i][j];
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// PART B — Addition
+// ---------------------------------------------------------------------------
+
+void addMatrices(int matA[MAX_SIZE][MAX_SIZE], int matB[MAX_SIZE][MAX_SIZE],
+                  int rows, int cols, int result[MAX_SIZE][MAX_SIZE]) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            result[i][j] = matA[i][j] + matB[i][j];
+        }
+    }
+}
