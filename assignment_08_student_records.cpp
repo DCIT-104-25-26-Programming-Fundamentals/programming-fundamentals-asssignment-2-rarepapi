@@ -143,7 +143,7 @@ void addStudent(vector<Student>& students) {
         return;
     }
 
-     for (int i = 0; i < numScores; i++) {
+for (int i = 0; i < numScores; i++) {
         double score;
         cout << "Enter score " << (i + 1) << ": ";
         cin >> score;
