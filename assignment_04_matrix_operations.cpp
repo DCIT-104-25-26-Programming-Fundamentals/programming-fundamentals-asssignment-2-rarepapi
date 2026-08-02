@@ -114,3 +114,29 @@ void addMatrices(int matA[MAX_SIZE][MAX_SIZE], int matB[MAX_SIZE][MAX_SIZE],
         }
     }
 }
+
+// ---------------------------------------------------------------------------
+// PART C — Multiplication
+// ---------------------------------------------------------------------------
+
+void multiplyMatrices(int matA[MAX_SIZE][MAX_SIZE], int matB[MAX_SIZE][MAX_SIZE],
+                       int rowsA, int colsA, int colsB,
+                       int result[MAX_SIZE][MAX_SIZE]) {
+    for (int i = 0; i < rowsA; i++) {
+        for (int j = 0; j < colsB; j++) {
+            result[i][j] = 0;
+            for (int k = 0; k < colsA; k++) {
+                result[i][j] += matA[i][k] * matB[k][j];
+            }
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// main
+// ---------------------------------------------------------------------------
+
+int main() {
+    int matA[MAX_SIZE][MAX_SIZE];
+    int matB[MAX_SIZE][MAX_SIZE];
+    int result[MAX_SIZE][MAX_SIZE];
