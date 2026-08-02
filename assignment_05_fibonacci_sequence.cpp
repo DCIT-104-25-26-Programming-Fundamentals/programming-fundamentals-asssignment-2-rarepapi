@@ -51,3 +51,23 @@
 #include <iostream>
 using namespace std;
 
+// ---------------------------------------------------------------------------
+// PART A — Print the first N terms of the Fibonacci sequence
+// ---------------------------------------------------------------------------
+void printFibonacci(int n) {
+    if (n <= 0) {
+        cout << "Error: Number of terms must be positive." << endl;
+        return;
+    }
+
+    int a = 0, b = 1;
+
+    cout << "Fibonacci sequence: ";
+    for (int i = 0; i < n; i++) {
+        cout << a << " ";
+        int next = a + b;
+        a = b;
+        b = next;
+    }
+    cout << endl;
+}
