@@ -93,3 +93,16 @@ void showMenu() {
     cout << "4. Quit" << endl;
     cout << "Enter your choice (1-4): ";
 }
+
+// ---------------------------------------------------------------------------
+// Feature 1 — Add a task
+// ---------------------------------------------------------------------------
+void addTask(vector<string>& tasks) {
+    cin.ignore(); // clear leftover newline from previous cin >>
+    cout << "Enter task: ";
+    string task;
+    getline(cin, task);
+
+    tasks.push_back(task);
+    cout << "Task added: \"" << task << "\"" << endl;
+}
