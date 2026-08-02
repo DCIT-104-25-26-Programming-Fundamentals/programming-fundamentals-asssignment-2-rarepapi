@@ -42,3 +42,18 @@
 #include <iostream>
 using namespace std;
 
+const int MAX_SIZE = 100; // Reasonable upper bound for array size
+
+// Function to calculate the sum of the array
+int getSum(int arr[], int n) {
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+
+// Function to calculate the average of the array
+double getAverage(int arr[], int n) {
+    return static_cast<double>(getSum(arr, n)) / n;
+}
