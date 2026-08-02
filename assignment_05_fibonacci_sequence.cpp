@@ -71,3 +71,23 @@ void printFibonacci(int n) {
     }
     cout << endl;
 }
+
+// ---------------------------------------------------------------------------
+// PART B — Check whether a given number is a Fibonacci number
+// ---------------------------------------------------------------------------
+bool isFibonacci(int num) {
+    if (num < 0) {
+        return false;
+    }
+
+    int a = 0, b = 1;
+
+    // Generate Fibonacci numbers until we reach or pass num
+    while (a < num) {
+        int next = a + b;
+        a = b;
+        b = next;
+    }
+
+    return a == num;
+}
