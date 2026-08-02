@@ -126,3 +126,13 @@ void showMenu() {
     cout << "7. Quit" << endl;
     cout << "Select an operation (1-7): ";
 }
+
+// ---------------------------------------------------------------------------
+// Prompt for two numbers
+// ---------------------------------------------------------------------------
+void getTwoNumbers(double& a, double& b) {
+    cout << "Enter first number : ";
+    cin >> a;
+    cout << "Enter second number: ";
+    cin >> b;
+}
