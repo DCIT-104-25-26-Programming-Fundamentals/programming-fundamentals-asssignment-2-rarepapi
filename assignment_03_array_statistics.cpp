@@ -79,3 +79,14 @@ int getMin(int arr[], int n) {
     }
     return minVal;
 }
+int main() {
+    int n;
+
+    cout << "How many numbers? ";
+    cin >> n;
+
+    // Validate n
+    if (n <= 0) {
+        cout << "Error: Number of values must be positive." << endl;
+        return 0;
+    }
