@@ -83,11 +83,3 @@
 #include <iomanip>
 using namespace std;
 
-// ---------------------------------------------------------------------------
-// Struct to represent a single student record
-// ---------------------------------------------------------------------------
-struct Student {
-    string name;
-    int id;
-    vector<double> scores;
-};
