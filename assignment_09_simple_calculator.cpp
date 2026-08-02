@@ -136,3 +136,21 @@ void getTwoNumbers(double& a, double& b) {
     cout << "Enter second number: ";
     cin >> b;
 }
+int main() {
+    int choice;
+    bool running = true;
+
+    cout << fixed << setprecision(2);
+
+    while (running) {
+        showMenu();
+        cin >> choice;
+
+        double a, b, result;
+
+        switch (choice) {
+            case 1:
+                getTwoNumbers(a, b);
+                result = add(a, b);
+                cout << "Result: " << a << " + " << b << " = " << result << endl;
+                break;
