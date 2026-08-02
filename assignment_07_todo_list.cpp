@@ -121,3 +121,27 @@ void viewTasks(const vector<string>& tasks) {
         cout << (i + 1) << ". " << tasks[i] << endl;
     }
 }
+
+// ---------------------------------------------------------------------------
+// Feature 3 — Delete a task
+// ---------------------------------------------------------------------------
+void deleteTask(vector<string>& tasks) {
+    if (tasks.empty()) {
+        cout << "Your task list is empty. Nothing to delete." << endl;
+        return;
+    }
+
+    viewTasks(tasks);
+    cout << "Enter task number to delete: ";
+    int num;
+    cin >> num;
+
+    if (num < 1 || num > static_cast<int>(tasks.size())) {
+        cout << "Error: Invalid task number." << endl;
+        return;
+    }
+
+    string removed = tasks[num - 1];
+    tasks.erase(tasks.begin() + (num - 1));
+    cout << "Task \"" << removed << "\" has been removed." << endl;
+}
