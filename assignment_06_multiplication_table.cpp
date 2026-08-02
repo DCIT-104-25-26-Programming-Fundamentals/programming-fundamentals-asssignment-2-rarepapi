@@ -83,3 +83,22 @@ void printTablesUpToN(int n) {
         }
     }
 }
+
+int main() {
+    // ---------------- PART A ----------------
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+
+    printTable(num);
+
+    // ---------------- PART B (Bonus) ----------------
+    int n;
+    cout << "\nEnter N (for tables 1 to N): ";
+    cin >> n;
+
+    cout << endl;
+    printTablesUpToN(n);
+
+    return 0;
+}
