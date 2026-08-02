@@ -65,3 +65,26 @@
 #include <string>
 using namespace std;
 
+const int MAX_SIZE = 10;
+
+// ---------------------------------------------------------------------------
+// Utility functions: read and print a matrix
+// ---------------------------------------------------------------------------
+
+void readMatrix(int mat[MAX_SIZE][MAX_SIZE], int rows, int cols, const string& name) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            cout << "Enter " << name << " element [" << i << "][" << j << "]: ";
+            cin >> mat[i][j];
+        }
+    }
+}
+
+void printMatrix(int mat[MAX_SIZE][MAX_SIZE], int rows, int cols) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            cout << setw(5) << mat[i][j];
+        }
+        cout << endl;
+    }
+}
