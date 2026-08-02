@@ -183,3 +183,33 @@ int main() {
     printMatrix(matB, rows, cols);
     cout << "\nSum (A + B):" << endl;
     printMatrix(result, rows, cols);
+
+     // ---------------- PART C: Multiplication ----------------
+    cout << "\n=== PART C: Multiply Two Matrices ===" << endl;
+
+    int rowsA, colsA, rowsB, colsB;
+    cout << "Enter rows for Matrix A: ";
+    cin >> rowsA;
+    cout << "Enter columns for Matrix A: ";
+    cin >> colsA;
+
+    if (rowsA <= 0 || colsA <= 0 || rowsA > MAX_SIZE || colsA > MAX_SIZE) {
+        cout << "Error: Dimensions must be between 1 and " << MAX_SIZE << "." << endl;
+        return 0;
+    }
+
+    cout << "Enter rows for Matrix B: ";
+    cin >> rowsB;
+    cout << "Enter columns for Matrix B: ";
+    cin >> colsB;
+
+    if (rowsB <= 0 || colsB <= 0 || rowsB > MAX_SIZE || colsB > MAX_SIZE) {
+        cout << "Error: Dimensions must be between 1 and " << MAX_SIZE << "." << endl;
+        return 0;
+    }
+
+    if (colsA != rowsB) {
+        cout << "Error: Number of columns in A (" << colsA
+             << ") must equal number of rows in B (" << rowsB << ")." << endl;
+        return 0;
+    }
